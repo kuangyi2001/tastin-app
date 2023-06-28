@@ -1,0 +1,17 @@
+.pay{
+  line-height: 200px;/*垂直居中关键*/
+
+text-align:center;
+
+height: 200px;
+
+font-size: 36px;
+
+
+}
+.buy{
+  text-align: center;
+}
+.buy_button{
+  background-color: red;
+}

@@ -1,0 +1,7 @@
+
+.background{
+  width: 60px;
+  height: 100rpx;
+  margin-right: 12rpx;
+  border-radius: 50%;
+}

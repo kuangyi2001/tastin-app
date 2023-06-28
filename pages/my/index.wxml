@@ -1,0 +1,10 @@
+
+<view class="my-bar">
+	<van-cell icon="sign" title="每日签到" size="large" is-link url="../sign/index" />
+	<van-cell icon="medal-o" title="个人中心" size="large" is-link url="../login/login" />
+	<van-cell icon="location-o" title="查看附件门店" size="large" is-link url="../map/index" />
+	<van-cell icon="info-o" title="关于我们" size="large" is-link url="" />
+	<van-cell icon="records" title="意见反馈" is-link url="" />
+</view>
+
+

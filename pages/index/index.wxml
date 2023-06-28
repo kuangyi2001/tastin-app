@@ -1,0 +1,50 @@
+<view class="page home">
+  <view class="page__hd">
+    <swiper 
+      class="tst_banners" 
+      indicator-dots="true"
+      autoplay="true"
+      interval="3000"
+    >
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item>
+          <navigator>
+            <image src="{{item.pic}}"/>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="page__bd">
+    <view class="tst_userinfo">
+    <view class="tst_user">
+      <cover-image class="userpic" src="../image/user.png "/>
+      <cover-view class="welcome">Hei,你来啦</cover-view>
+      <view class="credit">
+      <view class="credit__ch">积分</view>
+      <view class="credit__num">0</view>
+      </view>
+      <view class="voucher">
+    <view class="voucher__ch">优惠券</view>
+    <view class="vouche__num">0</view>
+    </view>
+    <cover-image src="../image/ewm.png" class="ewm"></cover-image>
+    </view>
+   
+  </view>
+
+    <view class="tst_way">
+    <view class="tst_forhere" bindtap="jump_page">
+      <image src="../image/forhere.png" class="pic_forhere" />
+      堂食
+    </view>
+    <view class="tst_takeout" bindtap="jump_page" >
+    <image src="../image/takeout.png" class="pic_takeout" />
+    兜走
+    </view>
+    </view>
+    <view>
+      <cover-image src="../image/hamburg.jpg" class="hbg"></cover-image>
+    </view>
+  </view>
+</view>

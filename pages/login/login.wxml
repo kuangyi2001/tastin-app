@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+
+
+
+ <view class="inputView"> 
+ 
+  <label class="loginLab">账号</label> 
+  <input class="inputText" placeholder="请输入账号" bindinput="usernameInput" /> 
+ </view> 
+ <view class="line"></view> 
+ 
+
+ <view class="inputView"> 
+  <label class="loginLab">密码</label> 
+  <input class="inputText" password="true" bindinput="password" placeholder="请输入密码"  /> 
+ </view> 
+ 
+
+ <view class="loginBtnView"> 
+  <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button> 
+ </view> 
+
+
+

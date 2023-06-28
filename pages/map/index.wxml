@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 地图组件 -->
+  <map 
+    id="myMap"
+    class="map"
+    latitude='{{latitude}}' 
+    longitude='{{longitude}}'
+    scale='16'
+    show-location
+    markers='{{markers}}'
+  >
+   
+    <cover-image 
+      bindtap="toReset"
+      src="../image/reset.png"
+      class="map-icon map-icon_reset">
+    </cover-image>
+  </map>
+</view>

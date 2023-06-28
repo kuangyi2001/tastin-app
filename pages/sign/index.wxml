@@ -1,0 +1,9 @@
+<!--pages/sign/index.wxml-->
+<van-calendar
+  title="日历"
+  poppable="{{ false }}"
+  show-confirm="{{ false }}"
+  class="calendar"
+/>
+<button bindtap="jump">签到</button>
+

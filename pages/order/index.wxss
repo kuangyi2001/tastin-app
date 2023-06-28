@@ -1,0 +1,47 @@
+
+.container{
+  display: flex;
+}
+.right{
+  flex:1
+}
+.down{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   
+}
+.details{
+  border-radius: 20px 20px 0px 0px; 
+ 
+  opacity: 1;
+   display: flex;
+    justify-content: center; 
+    align-items: center;
+     padding: 20rpx;
+     position: fixed; 
+    bottom: 0px;
+     width: 90vw; 
+    height: calc(90vh - 100rpx); 
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+.content{
+  overflow-y: scroll;
+   height: calc(100% - 100rpx);
+   flex: 1;
+}
+
+.shop_cart{
+ position:absolute;
+ bottom: 80px;
+ width: 100%;
+ height:50px;
+ background-color: pink;
+}
+
+.stepper{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+}

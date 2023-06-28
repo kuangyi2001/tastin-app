@@ -1,0 +1,7 @@
+<view class="pay">
+
+  <text>{{"¥"+total}}</text>
+</view>
+<view class="buy"> 
+  <button class="buy_button" bindtap="buy"> 购买</button>
+</view>

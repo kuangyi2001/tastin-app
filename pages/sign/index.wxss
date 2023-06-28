@@ -1,0 +1,4 @@
+/* pages/sign/index.wxss */
+.calendar {
+  --calendar-height: 500px;
+}

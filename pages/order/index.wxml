@@ -1,0 +1,90 @@
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+<view>
+  <view class="container">
+    <view class="left">
+    <van-sidebar  active-key="{{ activeKey }}" bind:change="onChange">
+                  <van-sidebar-item title="新品上市" custom-class="cellTab" />
+                  <van-sidebar-item title="单人套餐" custom-class="cellTab"/>
+                  <van-sidebar-item title="双人套餐" custom-class="cellTab"/>
+                  <van-sidebar-item title="下午茶套餐" custom-class="cellTab"/>
+                  <van-sidebar-item title="美味单品" custom-class="cellTab"/>
+         </van-sidebar> 
+  </view>
+  <view class="right">
+    <van-card
+    wx:for="{{goods}}"
+    num="{{1}}"
+    tag='{{item.tag}}'
+    price="{{item.price}}"
+    desc="{{item.details}}"
+    title="{{item.title}}"
+    thumb="{{item.image}}"
+  >
+  
+  <view slot="footer">
+       <button size="mini" data-item="{{item}}" bindtap="showDialog" >详情</button>
+      <button size="mini"  bindtap="reduce" data-item="{{item}}"> - </button>
+      <button size="mini"  bindtap="add"  data-item="{{item}}" > + </button>
+      <!-- <view class="stepper">
+        <van-stepper value="{{0}}" min="0" integer  data-item="{{item}}"  bind:plus="add" bind:minus="reduce" style="z-index: 0;"></van-stepper>
+      </view> -->
+     
+   
+    </view>
+  </van-card>
+  
+  </view>
+  <view class="details"  wx:if="{{isShowDialog}}" animation="{{animationData}}">
+    <view class="content" >
+      <swiper autoplay="true" interval="3000" duration="500" circular="true" indicator-dots="true" style="height: 50%; width: 100%; background-color: white;">
+        <swiper-item style="width: 100%;">
+          <image wx:for="{{goods}}" style="width: 100%;" src="{{item.image}}"></image>
+        </swiper-item>
+      </swiper>
+      <van-cell title="套餐类别" value="{{item.tag}}" />
+      <van-cell title="套餐名称" value="{{item.title}}" />
+      <van-cell title="价格" value="{{item.price}}" />
+      <van-cell title="描述" value="{{item.details}}" />
+  
+     
+    </view>
+    <view class="dialog-button" bindtap="hideDialog" style="margin-left: auto; position: absolute; top: 0; right: 0; font-size: 20px; display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; border-radius: 50%; background-color: white;">
+      <text style="font-size: 30px;">x</text>
+    </view>
+  </view>
+  </view>
+  
+  <view class="down">
+   <view  class="shop_cart" 
+   wx:for="{{order}}"
+   
+   >
+   <van-col >{{order}}</van-col>
+  
+   </view>
+   <van-submit-bar bindtap="jump"
+    price="{{total*100}}"
+    button-text="提交订单"
+    bind:submit="onClickButton"
+    tip="{{ true }}"
+  >
+    <view slot="tip">
+       <text>塔斯汀汉堡,中国人的汉堡</text>
+    </view>
+  </van-submit-bar>
+  
+  
+  </view>
+  
+  </view>
+  
+  
+  
+  
